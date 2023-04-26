@@ -2,6 +2,8 @@ package paymentpage
 
 import (
 	"time"
+
+	uuid2 "github.com/google/uuid"
 )
 
 // Constants with possible payment params and types of payment
@@ -92,6 +94,8 @@ func NewPayment(projectId int, paymentId interface{}) *Payment {
 
 	if paymentId != nil {
 		payment.SetParam(ParamPaymentId, paymentId)
+	} else {
+		payment.SetParam(ParamPaymentId, uuid2.New().String())
 	}
 
 	return payment
