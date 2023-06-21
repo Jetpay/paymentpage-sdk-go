@@ -1,4 +1,4 @@
-module paymentpage
+module github.com/Jetpay/paymentpage-sdk-go
 
 go 1.20
 
